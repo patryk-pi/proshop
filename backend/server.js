@@ -1,5 +1,7 @@
 import express from "express";
-const port = 5001;
+import dotenv from "dotenv";
+dotenv.config();
+const port = process.env.PORT || 8000;
 import products from "./data/products.js";
 
 const app = express();
@@ -14,6 +16,7 @@ app.get("/api/products", (req, res) => {
 
 app.get("/api/products/:id", (req, res) => {
     const product = products.find((p) => p._id === req.params.id);
+    res.json(product);
 });
 
 app.listen(port, () => {
