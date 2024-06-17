@@ -62,7 +62,7 @@ const deleteUser = asyncHandler(async (req, res) => {
 // @access Private/Admin
 
 const getUserByID = asyncHandler(async (req, res) => {
-    res.send("Get users");
+    res.send("Get user by ID");
 });
 
 // @desc Update
@@ -70,7 +70,7 @@ const getUserByID = asyncHandler(async (req, res) => {
 // @access Private/Admin
 
 const updateUser = asyncHandler(async (req, res) => {
-    res.send("Get users");
+    res.send("Update user");
 });
 
 export {
